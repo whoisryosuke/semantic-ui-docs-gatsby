@@ -1,3 +1,19 @@
 #icons .ui.card>div:nth-child(1) {
     padding: 2em 0;
 }
+
+.icon.example .column {
+    text-align: center;
+}
+
+.icon.example .column i {
+    margin: 3rem;
+    display: block;
+    transform: scale(2);
+    transform-origin: center;
+    transition: transform 400ms ease-in-out;
+}
+
+.icon.example .column i:hover {
+    transform: scale(3);
+}
