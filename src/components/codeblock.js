@@ -37,13 +37,13 @@ export default ({ children, className, live }) => {
                   <i
                     data-content="Hide code"
                     aria-label="Hide code"
-                    class="up icon"
+                    class="arrow up icon"
                   ></i>
                 ) : (
                   <i
                     data-content="Show code"
                     aria-label="Show code"
-                    class="down icon"
+                    class="arrow down icon"
                   ></i>
                 )}
               </button>
