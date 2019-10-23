@@ -19,7 +19,7 @@ export default ({ children, className, live }) => {
   const language = className && className.replace(/language-/, "")
   if (live) {
     return (
-      <div style={{ marginTop: "40px" }}>
+      <div className="ui codeblock">
         <Transition visible={copyStatus} animation="fade" duration={500}>
           <div className="ui success message">Code successfully copied</div>
         </Transition>
