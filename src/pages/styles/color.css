@@ -1,0 +1,9 @@
+.DesignTokensPage .ui.card .image {
+    height: 200px;
+    background: transparent;
+    margin-bottom: 0;
+}
+
+.DesignTokensPage .ui.card .content {
+    background-color: #FFF;
+}

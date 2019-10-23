@@ -1,0 +1,103 @@
+---
+title: Container
+path: /components/container
+date: 2019-09-26
+created: 2019-09-26
+---
+
+<Masthead title="Container" subheader="The responsive content area" />
+
+### When To Use
+
+A container is an element designed to contain page elements to a reasonable maximum width based on the size of a user's screen. This is useful to couple with other UI elements like <a href="/collections/grid.html">grid</a> or <a href="/collections/menu.html">menu</a> to restrict their width to a reasonable size for display.
+
+### Container Sizes
+
+Containers are designed to responsively adjust their maximum width based on the size of the screen on which they are appearing.
+
+<table className="ui celled definition table">
+    <thead>
+        <tr>
+            <th className="collapsing"></th>
+            <th>Mobile</th>
+            <th>Tablet</th>
+            <th className="single line">Small Monitor</th>
+            <th className="single line">Large Monitor</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Width</td>
+            <td>100%</td>
+            <td>
+                723px
+                <i className="circle help link icon"
+                    data-html="Maximum device width with two `1em` gutters and a `17px` scrollbar width. <div class='ui divider'></div> `768 - (14 * (1 * 2)) - 17`"></i>
+            </td>
+            <td>
+                933px
+                <i className="circle help link icon"
+                    data-html="Maximum device width with two `1.5em` gutters and a `17px` scrollbar width. <div class='ui divider'></div> `992 - (14 * (1.5 * 2)) - 17`"></i>
+            </td>
+            <td>
+                1127px
+                <i className="circle help link icon"
+                    data-html="Maximum device width with two `2em` gutters and a `17px` scrollbar width. <div class='ui divider'></div> `1200 - (14 * (2 * 2)) - 17`"></i>
+            </td>
+        </tr>
+        <tr>
+            <td className="single line">Gutter Size</td>
+            <td>1em</td>
+            <td>Fluid</td>
+            <td>Fluid</td>
+            <td>Fluid</td>
+        </tr>
+        <tr>
+            <td>Variable</td>
+            <td>
+                `$largestMobileScreen`
+            </td>
+            <td>
+                `$mobileBreakpoint`
+            </td>
+            <td>
+                `$smallMonitorBreakpoint`
+            </td>
+            <td>
+                `$largeMonitorBreakpoint`
+            </td>
+        </tr>
+        <tr>
+            <td>Device Width</td>
+            <td>below 768px</td>
+            <td>768px - 991px</td>
+            <td>992px - 1200px</td>
+            <td>above 1200px</td>
+        </tr>
+    </tbody>
+</table>
+
+### Responsive Visibility
+
+Since variations in Semantic UI are only assigned in the scope of components, there are no "free floating" responsive class names, however some components include responsive variations to help ease responsive design. <a href="/collections/grid.html#device-visibility">Grid</a> for example, includes responsive classes for hiding or showing `column`, `row` based on device type.
+
+<Button secondary as="a" href="/collections/grid.html#device-visibility">See grid responsive variations <i className="right chevron icon"></i></Button>
+
+### Determining Maximum Widths
+
+Containers appear at the same width at each device size. This size is calculated programmatically by determining the maximum device width available within a device breakpoint, given a desired minimum gutter size.
+
+For example to determine tablet container size the following formula is used:
+
+```sass
+/* In site.variables */
+@tabletBreakpoint : 768px;
+@scrollbarWidth : 17px; /* This is a constant */
+ /* In container.variables */
+@tabletMinimumGutter : (@emSize  * 1); /* require 1em gutter */
+@tabletWidth : @tabletBreakpoint - (@tabletMinimumGutter * 2) - @scrollbarWidth;
+```
+
+This is the same as `768px - (14px * 2) - 17px` or `723px`
+
+Adjusting site breakpoints in `site.variables` to use custom values will automatically adjust container widths.

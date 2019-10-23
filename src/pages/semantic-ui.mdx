@@ -1,0 +1,28 @@
+---
+title: Semantic UI
+path: /semantic-ui
+date: 2019-08-27
+created: 2019-08-27
+---
+
+<Masthead title="Semantic UI" subheader="Empowering designers and developers by creating a shared vocabulary for UI." />
+
+The LESS/JS-based component library that this design system is primarily founded upon is [Semantic UI](http://semantic-ui.com). Many of the components are directly cloned from the open source repository, so you'll see many similarities between their API and documentation.
+
+Semantic UI is a CSS and JS framework, similar to Bootstrap, for scaffolding and styling websites and apps using various components (like buttons or headers). The mission of the framework is to create semantic CSS class names and React props to define and style DOM and React elements. 
+
+The concept is similar to utility-based CSS libraries such as **[Tailwind CSS](https://tailwindcss.com/)**, but is approached from a OOCSS (object-orientated CSS) perspective. This allows the use of semantically named utility classes (extra padding using `.relaxed`), combined with the power of scoping components properly through more direct CSS selectors (`.ui.container` vs just `.container`).
+
+> We also use [Fomantic UI](https://fomantic-ui.com/modules/calendar.html) components, which is a branch off from Semantic UI that offers a more diverse selection of components (like a calendar).
+
+## Differences Between Bootstrap and Semantic
+
+- All components, unless they're certain sub-elements (like subheaders), must have a `.ui` class name preceeding their component name (e.g.: `<div class="ui container">`).
+
+
+### The Grid
+
+Semantic's grid is very similar to the new flexbox based Bootstrap v4 grid in it's implementation. There are only a few differences:
+
+- You don't have to wrap columns in a `.row` element.
+- Responsive columns are handled through device specific classnames, on a column basis (`<div class="six wide tablet eight wide computer column"></div>`). The device size class names are ordered smallest to largest.
