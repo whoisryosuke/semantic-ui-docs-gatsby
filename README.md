@@ -38,7 +38,7 @@ You can create a new page by adding a new JS file in the pages directory. The na
 ```js
 import React from "react"
 
-import Layout from "../components/layout"
+import Layout from "@components/layout"
 
 export default function PageName() {
   return (
@@ -104,7 +104,7 @@ For example, to display a code snippet and live editable example:
 You can use the same component that's used when rendering MDX, the `<CodeBlock>`. It accepts code as 'children' and the classname determines the language used for highlighting.
 
 ```js
-import CodeBlock from "../components/CodeBlock/CodeBlock"
+import CodeBlock from "@components/CodeBlock/CodeBlock"
 
 const codeExample = `<div>Legalize it</div>`
 

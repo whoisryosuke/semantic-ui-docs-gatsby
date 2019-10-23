@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../../components/layout"
-import CodeBlock from "../../components/codeblock"
+import Layout from "@components/layout"
+import CodeBlock from "@components/codeblock"
 
 export default function GuidelinesPage() {
   const headerExample1 = `

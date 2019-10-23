@@ -1,6 +1,6 @@
 import React from "react"
-import Layout from "../../components/layout"
-import CodeBlock from "../../components/codeblock"
+import Layout from "@components/layout"
+import CodeBlock from "@components/codeblock"
 
 import "./iconography.css"
 

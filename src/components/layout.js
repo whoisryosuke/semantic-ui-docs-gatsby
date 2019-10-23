@@ -2,7 +2,7 @@ import React from "react"
 import Helmet from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 import { Sidebar } from "semantic-ui-react"
-import debounce from "../tools/debounce"
+import debounce from "@tools/debounce"
 
 import DocSidebar from "./sidebar"
 import "./layout.scss"

@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Dropdown, Menu, Sidebar } from "semantic-ui-react"
 
-import capitalize from "../tools/capitalize"
+import capitalize from "@tools/capitalize"
 
 import Logo from "./logo"
 
