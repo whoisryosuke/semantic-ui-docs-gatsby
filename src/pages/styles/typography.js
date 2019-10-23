@@ -1,31 +1,33 @@
 import React from "react"
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
-import SyntaxHighlighter from "react-syntax-highlighter"
-import { obsidian } from "react-syntax-highlighter/dist/esm/styles/hljs"
-import copy from "copy-to-clipboard"
+import CodeBlock from "../../components/codeblock"
 
 export default function GuidelinesPage() {
-  const headerExample1 = `<h1 className="ui header">
+  const headerExample1 = `
+<div>
+  <h1 className="ui header">
     H1
     <div className="sub header">Sub Header</div>
-</h1>
-<h2 className="ui header">
+  </h1>
+  <h2 className="ui header">
     H2
     <div className="sub header">Sub Header</div>
-</h2>
-<h3 className="ui header">
+  </h2>
+  <h3 className="ui header">
     H3
     <div className="sub header">Sub Header</div>
-</h3>
-<h4 className="ui header">
+  </h3>
+  <h4 className="ui header">
     H4
     <div className="sub header">Sub Header</div>
-</h4>
-<h5 className="ui header">
+  </h4>
+  <h5 className="ui header">
     H5
     <div className="sub header">Sub Header</div>
-</h5>`
+  </h5>
+</div>
+`
 
   return (
     <Layout title="Typography">
@@ -69,7 +71,7 @@ export default function GuidelinesPage() {
               <td>
                 <h1 className="ui header">H1</h1>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>900</td>
               <td>28/14em</td>
               <td>Normal</td>
@@ -79,7 +81,7 @@ export default function GuidelinesPage() {
               <td>
                 <h2 className="ui header">H2</h2>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>900</td>
               <td>24/14em</td>
               <td>Normal</td>
@@ -89,7 +91,7 @@ export default function GuidelinesPage() {
               <td>
                 <h3 className="ui header">H3</h3>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>900</td>
               <td>18/14em</td>
               <td>Normal</td>
@@ -99,7 +101,7 @@ export default function GuidelinesPage() {
               <td>
                 <h4 className="ui header">H4</h4>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>700</td>
               <td>15/14em</td>
               <td>Normal</td>
@@ -109,7 +111,7 @@ export default function GuidelinesPage() {
               <td>
                 <h5 className="ui header">H5</h5>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>700</td>
               <td>14/14em</td>
               <td>Normal</td>
@@ -119,7 +121,7 @@ export default function GuidelinesPage() {
               <td>
                 <p>p</p>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>300</td>
               <td>14px</td>
               <td>Normal</td>
@@ -131,7 +133,7 @@ export default function GuidelinesPage() {
                   <small>small</small>
                 </p>
               </td>
-              <td>Avenir</td>
+              <td>Roboto</td>
               <td>300</td>
               <td>11.2px</td>
               <td>Normal</td>
@@ -144,39 +146,7 @@ export default function GuidelinesPage() {
       <section className="ui segment vertical">
         <h2 id="sub-headers">Sub headers</h2>
 
-        <h1 className="ui header">
-          H1
-          <div className="sub header">Sub Header</div>
-        </h1>
-        <h2 className="ui header">
-          H2
-          <div className="sub header">Sub Header</div>
-        </h2>
-        <h3 className="ui header">
-          H3
-          <div className="sub header">Sub Header</div>
-        </h3>
-        <h4 className="ui header">
-          H4
-          <div className="sub header">Sub Header</div>
-        </h4>
-        <h5 className="ui header">
-          H5
-          <div className="sub header">Sub Header</div>
-        </h5>
-
-        <div className="ui inverted segment">
-          <h3>Code snippet:</h3>
-          <SyntaxHighlighter
-            language="html"
-            style={obsidian}
-            onClick={() => {
-              copy(headerExample1)
-            }}
-          >
-            {headerExample1}
-          </SyntaxHighlighter>
-        </div>
+        <CodeBlock live={true}>{headerExample1}</CodeBlock>
 
         <h2 id="states">States</h2>
         <div className="ui disabled header">Disabled Header</div>
