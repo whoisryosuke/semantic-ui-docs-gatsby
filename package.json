@@ -1,8 +1,8 @@
 {
-  "name": "kushco-components-docs",
+  "name": "semantic-ui-docs-gatsby",
   "private": true,
-  "description": "Documentation for the Kush Co. Holdings component library.",
-  "version": "0.1.0",
+  "description": "Documentation for the Semantic UI component library.",
+  "version": "0.2.0",
   "author": "Ryosuke <ryosuke.san.hana@gmail.com>",
   "dependencies": {
     "@mdx-js/mdx": "^1.1.1",
@@ -33,26 +33,48 @@
   },
   "devDependencies": {
     "html-loader": "^0.5.5",
+    "nodemon": "^1.19.4",
     "prettier": "^1.18.2"
   },
   "keywords": [
-    "gatsby"
+    "react",
+    "gatsby",
+    "mdx",
+    "semantic-ui",
+    "semantic-ui-react",
+    "documentation"
   ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "clean": "rm -rf .cache && npm run develop",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "develop": "nodemon --exec \"gatsby develop\"",
+    "debug": "nodemon --exec \"node --inspect-brk --no-lazy node_modules/.bin/gatsby develop\"",
+    "format": "prettier --write 'src/**/*.js'",
+    "lint": "eslint . --ext ts --ext tsx",
+    "storybook": "start-storybook",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      ".cache/*",
+      "public/*",
+      "schema.json",
+      "src/*",
+      "content/*",
+      "static/*"
+    ],
+    "delay": "1500"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/whoisryosuke/semantic-ui-docs-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/whoisryosuke/semantic-ui-docs-gatsby/issues"
   }
 }
