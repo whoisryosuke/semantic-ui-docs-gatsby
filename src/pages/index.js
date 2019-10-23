@@ -1,9 +1,25 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import "./index.css"
 
-import Layout from "../components/layout"
+import SUILogo from "../images/logo.png"
+import DevicesImg from "../images/devices.png"
+import ElyseImg from "../images/avatars/elyse.png"
+import MatthewImg from "../images/avatars/matthew.png"
+import KristyImg from "../images/avatars/kristy.png"
+import MarkImg from "../images/avatars/mark.png"
+import RachelImg from "../images/avatars/rachel.png"
+import LenaImg from "../images/avatars/lena.png"
+import MollyImg from "../images/avatars/molly.png"
+import EveImg from "../images/avatars/eve.png"
+import ThemingImg from "../images/icons/theming.png"
+import PaintImg from "../images/icons/paint.png"
+import BookImg from "../images/icons/book.png"
+import LabImg from "../images/icons/lab.png"
+import ToolboxImg from "../images/icons/toolbox.png"
+import MobileImg from "../images/icons/mobile.png"
+import HeartImg from "../images/icons/heart.png"
+import RocketImg from "../images/icons/rocket.png"
 
 const IndexPage = ({ data }) => (
   <div id="example" class="index">
@@ -15,7 +31,7 @@ const IndexPage = ({ data }) => (
         <div class="ui logo shape">
           <div class="sides">
             <div class="active ui side">
-              <img class="ui image" src="/images/logo.png" />
+              <img class="ui image" src={SUILogo} />
             </div>
           </div>
         </div>
@@ -178,7 +194,7 @@ const IndexPage = ({ data }) => (
   <div class="ui stackable very relaxed center aligned grid container">
     <div class="row">
       <div class="twelve wide column">
-        <img class="ui fluid image" src="/images/devices.png" />
+        <img class="ui fluid image" src={DevicesImg} />
         <h1 class="ui header">Design Beautiful Websites Quickly</h1>
         <p>Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.</p>
       </div>
@@ -257,9 +273,9 @@ const IndexPage = ({ data }) => (
   })
 ;`}</code></pre></div>
         <div class="ui small sequenced images">
-          <img src="/images/avatar2/large/elyse.png" class="ui circular image" />
-          <img src="/images/avatar2/large/matthew.png" class="ui circular image" />
-          <img src="/images/avatar2/large/kristy.png" class="ui circular image" />
+          <img src={ElyseImg} class="ui circular image" />
+          <img src={MatthewImg} class="ui circular image" />
+          <img src={KristyImg} class="ui circular image" />
         </div>
       </div>
     </div>
@@ -290,7 +306,7 @@ const IndexPage = ({ data }) => (
   <div class="ui stackable very relaxed two column grid container">
     <div class="center aligned column">
       <h1 class="ui icon header">
-        <img src="/images/icons/theming.png" class="ui icon image" />
+        <img src={ThemingImg} class="ui icon image" />
         Unbelievable Theming
       </h1>
       <p>Semantic comes equipped with an intuitive inheritance system and high level theming variables that let you have complete design freedom.</p>
@@ -355,7 +371,7 @@ const IndexPage = ({ data }) => (
     <div class="row">
       <div class="column">
         <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/paint.png" />
+          <img class="ui icon image" src={PaintImg} />
           3000+ Theming Variables
         </h2>
         <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
@@ -363,7 +379,7 @@ const IndexPage = ({ data }) => (
       </div>
       <div class="column">
         <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/book.png" />
+          <img class="ui icon image" src={BookImg} />
           50+ UI Components
         </h2>
         <p>Build your entire site with one UI stack. Share your UI between multiple projects.</p>
@@ -371,7 +387,7 @@ const IndexPage = ({ data }) => (
       </div>
       <div class="column">
         <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/lab.png" />
+          <img class="ui icon image" src={LabImg} />
           5000+ Commits
         </h2>
         <p>
@@ -386,7 +402,7 @@ const IndexPage = ({ data }) => (
   <div class="ui stackable very relaxed grid container">
     <div class="fourteen wide center aligned centered column">
       <h1 class="ui icon header">
-        <img src="/images/icons/toolbox.png" class="ui icon image" />
+        <img src={ToolboxImg} class="ui icon image" />
         Unbelievable Breadth
       </h1>
       <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
@@ -400,7 +416,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/collections/menu">Menu</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="menu"></a>
+          </h4>
           <div class="ui vertical demo menu">
             <a class="active teal item">
               Inbox
@@ -451,7 +467,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/elements/divider">Divider</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="divider"></a>
+          </h4>
           <div class="ui two column stackable center aligned grid segment">
             <div class="column">
               <div class="ui button">A</div>
@@ -465,7 +481,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/modules/accordion">Accordion</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="accordion"></a>
+          </h4>
           <div class="ui vertical fluid accordion menu">
             <div class="item">
               <a class="active title">
@@ -544,7 +560,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/collections/message">Message</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="message"></a>
+          </h4>
           <div class="ui message">
             <i class="close icon"></i>
             This site uses cookies
@@ -568,7 +584,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/views/card">Card</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="card"></a>
+          </h4>
           <div class="ui card">
             <div class="blurring dimmable image">
               <div class="ui dimmer">
@@ -578,7 +594,7 @@ const IndexPage = ({ data }) => (
                   </div>
                 </div>
               </div>
-              <img src="/images/avatar2/large/rachel.png" />
+              <img src={RachelImg} />
             </div>
             <div class="content">
               <div class="header">Rachel Maddaw</div>
@@ -600,11 +616,11 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/views/feed">Feed</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="feed"></a>
+          </h4>
           <div class="ui feed">
             <div class="event">
               <div class="label">
-                <img src="/images/avatar2/small/mark.png" />
+                <img src={MarkImg} />
               </div>
               <div class="content">
                 <div class="summary">
@@ -616,7 +632,7 @@ const IndexPage = ({ data }) => (
             </div>
             <div class="event">
               <div class="label">
-                <img src="/images/avatar2/small/lena.png" />
+                <img src={LenaImg} />
               </div>
               <div class="content">
                 You added Lena to the group <a>Close Friends</a>
@@ -624,7 +640,7 @@ const IndexPage = ({ data }) => (
             </div>
             <div class="event">
               <div class="label">
-                <img src="/images/avatar2/small/eve.png" />
+                <img src={EveImg} />
               </div>
               <div class="content">
                 Eve just <a>posted on your page</a>
@@ -635,9 +651,9 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/elements/label">Label</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="label"></a>
+          </h4>
           <div class="ui image label">
-            <img src="/images/avatar2/small/molly.png" />
+            <img src={MollyImg} />
             molly@thebears.com
             <i class="delete icon"></i>
           </div>
@@ -649,7 +665,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/elements/step">Step</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="step"></a>
+          </h4>
           <div class="ui fluid vertical steps">
             <a class="step">
               <i class="truck icon"></i>
@@ -679,7 +695,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/modules/dropdown">Dropdown</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="dropdown"></a>
+          </h4>
           <div class="ui fluid search selection dropdown">
             <input type="hidden" name="country" />
             <i class="dropdown icon"></i>
@@ -987,7 +1003,7 @@ const IndexPage = ({ data }) => (
         <div class="no segment example">
           <h4 class="ui header">
             <a href="/elements/segment">Segment</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="segment"></a>
+          </h4>
           <div class="ui stacked segment"></div>
           <div class="ui raised segment"></div>
           <div class="ui secondary segment"></div>
@@ -1000,7 +1016,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/elements/input">Input</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="input"></a>
+          </h4>
           <div class="ui action left icon input">
             <i class="search icon"></i>
             <input type="text" placeholder="Search..." />
@@ -1026,7 +1042,7 @@ const IndexPage = ({ data }) => (
         <div class="no example">
           <h4 class="ui header">
             <a href="/modules/checkbox">Checkbox</a>
-          </h4><i class="fitted icon code"></i><a class="anchor" id="checkbox"></a>
+          </h4>
           <div class="ui checkbox">
             <input type="checkbox" name="fun" tabindex="0" class="hidden" />
             <label>I enjoy having fun</label>
@@ -1053,7 +1069,7 @@ const IndexPage = ({ data }) => (
     <div class="row">
       <div class="column">
         <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/mobile.png" />
+          <img class="ui icon image" src={MobileImg} />
           Responsively Designed
         </h2>
         <p>Semantic is <b>designed completely with em</b> making responsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
@@ -1061,7 +1077,7 @@ const IndexPage = ({ data }) => (
       </div>
       <div class="column">
         <h2 class="ui icon header">
-          <img class="ui icon image" src="/images/icons/heart.png" />
+          <img class="ui icon image" src={HeartImg} />
           Partners with Libraries You Love
         </h2>
         <p>Semantic has integrations with <b>React, Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
@@ -1074,7 +1090,7 @@ const IndexPage = ({ data }) => (
   <div class="ui stackable center aligned grid container">
     <div class="fourteen wide column">
       <h1 class="ui icon header">
-        <img class="ui inline icon image" src="/images/icons/rocket.png" />
+        <img class="ui inline icon image" src={RocketImg} />
         Liberate your Development
       </h1>
       <div class="ui stackable center aligned vertically padded grid">
