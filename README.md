@@ -25,9 +25,13 @@ This runs the Gatsby build process (`gatsby build` under the hood). Gatsby will 
 
 ## Creating/Editing Pages
 
-Gatsby builds pages by using the JS files in `/docs/src/pages/`. Each JS file is a React component that represents page content, which is wrapped in a `<Layout>` component (`/docs/src/components/layout.js`) that contains the header and sidebar.
+There are two ways to create pages with this Gatsby setup, with ReactJS files or MDX.
 
-You can create a new page by adding a new JS file in the pages directory. The name of the file will be the slug of the page (e.g. `/docs/src/pages/about.js` == `kushsupply.co/about`). Inside the file, Gatsby requires that you export a React component. This might seem intimidating, but any function can be a React component as long as you return HTML or JSX (basically React's way of writing components like `<Layout>`).
+### ReactJS Pages
+
+Gatsby builds pages by using the JS files in `/src/pages/`. Each JS file is a React component that represents page content, which should be wrapped in a `<Layout>` component (`/src/components/layout.js`) that contains the header and sidebar.
+
+You can create a new page by adding a new JS file in the pages directory. The name of the file will be the slug of the page (e.g. `/src/pages/about.js` == `yourwebsite.com/about`). Inside the file, Gatsby requires that you export a React component. This might seem intimidating, but any function can be a React component as long as you return HTML or JSX (basically React's way of writing components like `<Layout>`).
 
 **Page Template**:
 
@@ -45,6 +49,38 @@ export default function PageName() {
 }
 ```
 
+### MDX
+
+The easiest way to create content is using MDX. Gatsby for MDX files inside the `/content/` subdirectories. If you're looking to write component documentation, it should go in `/content/definitions/`. Otherwise any other type of page should go in the `/content/pages/` folder.
+
+Gatsby uses Markdown "frontmatter" to create pages and is required for pages to work. Inside the frontmatter, you'll need a title (page title), path (the actual page slug), date (last date modified), and created (also a date) fields.
+
+Since you're also using MDX, you have the ability to use any React components passed into the rendering scope (see: `/src/templates/posts.js`). This means you can use any Semantic UI React components, as well as special layout components created for the docs (e.g. `<Masthead title="Getting Started" subheader="Getting up and running with Semantic UI" />`).
+
+**Page Template**:
+
+````mdx
+---
+title: Getting Started
+path: /introduction/getting-started
+date: 2019-10-23
+created: 2019-10-23
+---
+
+<Masthead
+  title="Getting Started"
+  subheader="Getting up and running with Semantic UI"
+/>
+
+## Preface
+
+Semantic UI packaged Gulp build tools so your project can preserve its [own theme changes](https://semantic-ui.com/usage/theming.html).
+
+```jsx live
+<Button>Get Started</Button>
+```
+````
+
 ## Adding code snippets
 
 We use MDX to allow more accessible authoring of documentation, which enables you to use Markdown to create code snippets.
@@ -61,6 +97,8 @@ For example, to display a code snippet and live editable example:
 ```
 ````
 
+````
+
 ### Manually inside React components
 
 You can use the same component that's used when rendering MDX, the `<CodeBlock>`. It accepts code as 'children' and the classname determines the language used for highlighting.
@@ -75,3 +113,4 @@ const codeExample = `<div>Legalize it</div>`
   <CodeBlock className="language-js">{codeExample}</CodeBlock>
 </div>
 ```
+````
