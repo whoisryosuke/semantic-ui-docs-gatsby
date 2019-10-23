@@ -132,7 +132,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `page-docs`,
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/content/pages`,
         ignore: [`**/.js`], // ignore React page files, only MDX needed
       },
     },
