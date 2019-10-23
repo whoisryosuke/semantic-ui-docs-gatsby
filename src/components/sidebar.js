@@ -22,17 +22,15 @@ const DocSidebar = ({
     animation={animation}
   >
     <div class="item">
-      <h1 className="Logo">
-        <Link
-          to="/"
-          style={{
-            color: "white",
-            textDecoration: "none",
-          }}
-        >
-          <Logo siteTitle={siteTitle} />
-        </Link>
-      </h1>
+      <Link
+        to="/"
+        style={{
+          color: "white",
+          textDecoration: "none",
+        }}
+      >
+        <Logo siteTitle={siteTitle} />
+      </Link>
     </div>
     {sidebarPages
       ? sidebarPages.map(sidebarPage => {
