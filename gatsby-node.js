@@ -7,25 +7,6 @@
 const path = require("path")
 const { createFilePath } = require("gatsby-source-filesystem")
 
-/**
- * Custom Webpack config
- *
- * Adds aliases for paths (like components)
- * so you don't get lost in relative hell -> '../../../'
- */
-exports.onCreateWebpackConfig = ({ config, actions }) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        "@components": path.join(__dirname, "./src/components"),
-        "@images": path.join(__dirname, "./src/images"),
-        "@tools": path.join(__dirname, "./src/tools"),
-        "@templates": path.join(__dirname, "./src/templates"),
-      },
-    },
-  })
-}
-
 // Create slugs for MDX pages
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
@@ -93,8 +74,6 @@ exports.createPages = ({ graphql, actions }) => {
 
 /**
  * Custom Webpack config
- * Allows importing of HTML files.
- *
  * */
 
 exports.onCreateWebpackConfig = ({
@@ -105,6 +84,21 @@ exports.onCreateWebpackConfig = ({
   actions,
 }) => {
   actions.setWebpackConfig({
+    /**
+     * Adds aliases for paths (like components)
+     * so you don't get lost in relative hell -> '../../../'
+     */
+    resolve: {
+      alias: {
+        "@components": path.join(__dirname, "./src/components"),
+        "@images": path.join(__dirname, "./src/images"),
+        "@tools": path.join(__dirname, "./src/tools"),
+        "@templates": path.join(__dirname, "./src/templates"),
+      },
+    },
+    /**
+     * Allows importing of HTML files.
+     * */
     module: {
       rules: [
         {
