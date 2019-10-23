@@ -157,10 +157,10 @@ const IndexPage = ({ data }) => (
       </h1>
       <div class="ui hidden divider"></div>
 
-      <a href="/introduction/getting-started.html" class="ui huge inverted download button">
+      <a href="/introduction/getting-started" class="ui huge inverted download button">
         Get Started
       </a>
-      <a href="/introduction/new.html" class="ui huge inverted basic button">New in 2.4</a>
+      <a href="/introduction/new" class="ui huge inverted basic button">New in 2.4</a>
     </div>
     <div class="inverted advertisement">
       
@@ -359,7 +359,7 @@ const IndexPage = ({ data }) => (
           3000+ Theming Variables
         </h2>
         <p>The only dogma from this framework: <em>everything arbitrary is mutable</em>.</p>
-        <a class="ui large button" href="/usage/theming.html">Theming Guide</a>
+        <a class="ui large button" href="/usage/theming">Theming Guide</a>
       </div>
       <div class="column">
         <h2 class="ui icon header">
@@ -390,7 +390,7 @@ const IndexPage = ({ data }) => (
         Unbelievable Breadth
       </h1>
       <p>Definitions aren't limited to just buttons on a page. Semantic's components allow several distinct types of definitions: elements, collections, views, modules and behaviors which cover the gamut of interface design.</p>
-      <a class="ui large primary button" href="/usage/layout.html">
+      <a class="ui large primary button" href="/usage/layout">
         See Layout Examples
         <i class="right chevron icon"></i>
       </a>
@@ -399,7 +399,7 @@ const IndexPage = ({ data }) => (
       <div class="column">
         <div class="no example">
           <h4 class="ui header">
-            <a href="/collections/menu.html">Menu</a>
+            <a href="/collections/menu">Menu</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="menu"></a>
           <div class="ui vertical demo menu">
             <a class="active teal item">
@@ -450,7 +450,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/elements/divider.html">Divider</a>
+            <a href="/elements/divider">Divider</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="divider"></a>
           <div class="ui two column stackable center aligned grid segment">
             <div class="column">
@@ -464,7 +464,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/modules/accordion.html">Accordion</a>
+            <a href="/modules/accordion">Accordion</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="accordion"></a>
           <div class="ui vertical fluid accordion menu">
             <div class="item">
@@ -543,7 +543,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/collections/message.html">Message</a>
+            <a href="/collections/message">Message</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="message"></a>
           <div class="ui message">
             <i class="close icon"></i>
@@ -567,7 +567,7 @@ const IndexPage = ({ data }) => (
       <div class="tablet only computer only column">
         <div class="no example">
           <h4 class="ui header">
-            <a href="/views/card.html">Card</a>
+            <a href="/views/card">Card</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="card"></a>
           <div class="ui card">
             <div class="blurring dimmable image">
@@ -599,7 +599,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/views/feed.html">Feed</a>
+            <a href="/views/feed">Feed</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="feed"></a>
           <div class="ui feed">
             <div class="event">
@@ -634,7 +634,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/elements/label.html">Label</a>
+            <a href="/elements/label">Label</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="label"></a>
           <div class="ui image label">
             <img src="/images/avatar2/small/molly.png" />
@@ -648,7 +648,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/elements/step.html">Step</a>
+            <a href="/elements/step">Step</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="step"></a>
           <div class="ui fluid vertical steps">
             <a class="step">
@@ -678,7 +678,7 @@ const IndexPage = ({ data }) => (
       <div class="tablet only computer only column">
         <div class="no example">
           <h4 class="ui header">
-            <a href="/modules/dropdown.html">Dropdown</a>
+            <a href="/modules/dropdown">Dropdown</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="dropdown"></a>
           <div class="ui fluid search selection dropdown">
             <input type="hidden" name="country" />
@@ -986,7 +986,7 @@ const IndexPage = ({ data }) => (
       </div>
         <div class="no segment example">
           <h4 class="ui header">
-            <a href="/elements/segment.html">Segment</a>
+            <a href="/elements/segment">Segment</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="segment"></a>
           <div class="ui stacked segment"></div>
           <div class="ui raised segment"></div>
@@ -999,7 +999,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/elements/input.html">Input</a>
+            <a href="/elements/input">Input</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="input"></a>
           <div class="ui action left icon input">
             <i class="search icon"></i>
@@ -1025,7 +1025,7 @@ const IndexPage = ({ data }) => (
         </div>
         <div class="no example">
           <h4 class="ui header">
-            <a href="/modules/checkbox.html">Checkbox</a>
+            <a href="/modules/checkbox">Checkbox</a>
           </h4><i class="fitted icon code"></i><a class="anchor" id="checkbox"></a>
           <div class="ui checkbox">
             <input type="checkbox" name="fun" tabindex="0" class="hidden" />
@@ -1057,7 +1057,7 @@ const IndexPage = ({ data }) => (
           Responsively Designed
         </h2>
         <p>Semantic is <b>designed completely with em</b> making responsive sizing a breeze. Design <em>variations</em> built into elements allow you to make the choice how content adjusts for tablet and mobile.</p>
-        <a class="ui large button" href="/usage/layout.html">Responsive Examples</a>
+        <a class="ui large button" href="/usage/layout">Responsive Examples</a>
       </div>
       <div class="column">
         <h2 class="ui icon header">
@@ -1065,7 +1065,7 @@ const IndexPage = ({ data }) => (
           Partners with Libraries You Love
         </h2>
         <p>Semantic has integrations with <b>React, Angular, Meteor, Ember</b> and many other frameworks to help organize your UI layer alongside your application logic.</p>
-        <a class="ui large button" href="/introduction/integrations.html">See Integrations</a>
+        <a class="ui large button" href="/introduction/integrations">See Integrations</a>
       </div>
     </div>
   </div>
@@ -1081,7 +1081,7 @@ const IndexPage = ({ data }) => (
         <div class="eight wide column">
           <h3 class="ui header">Enterprise Ready</h3>
           <p>Build tools, performance logging, support for custom definitions, multiple-levels of theme inheritance—a developer's dream.</p>
-          <a class="ui large right labeled primary icon button" href="/introduction/getting-started.html">
+          <a class="ui large right labeled primary icon button" href="/introduction/getting-started">
             <i class="right chevron icon"></i>
             Get Started Now
           </a>
