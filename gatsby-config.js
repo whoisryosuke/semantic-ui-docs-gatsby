@@ -47,18 +47,19 @@ module.exports = {
               slug: "/styles/iconography",
               title: "Iconography",
             },
-            {
-              slug: "/styles/imagery",
-              title: "Imagery",
-            },
-            {
-              slug: "/styles/motion",
-              title: "Motion",
-            },
-            {
-              slug: "/styles/voice-and-tone",
-              title: "Voice and tone",
-            },
+            // For Design Systems:
+            // {
+            //   slug: "/styles/imagery",
+            //   title: "Imagery",
+            // },
+            // {
+            //   slug: "/styles/motion",
+            //   title: "Motion",
+            // },
+            // {
+            //   slug: "/styles/voice-and-tone",
+            //   title: "Voice and tone",
+            // },
           ],
         },
         {
@@ -86,28 +87,12 @@ module.exports = {
               title: "Input",
             },
             {
-              slug: "/components/interactive-panels",
-              title: "Interactive Panels",
-            },
-            {
               slug: "/components/grid",
               title: "Grid",
             },
             {
               slug: "/components/list",
               title: "List",
-            },
-            {
-              slug: "/components/notifications",
-              title: "Notifications",
-            },
-            {
-              slug: "/components/tables",
-              title: "Tables",
-            },
-            {
-              slug: "/components/text",
-              title: "Text",
             },
           ],
         },
