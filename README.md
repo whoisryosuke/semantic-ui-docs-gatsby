@@ -1,17 +1,21 @@
-# Kush Supply Co. Design System Documentation
+# Semantic UI Documentation
 
-The documentation for the Kush Supply Co. design system and component library. This is a statically generated PWA built using GatsbyJS.
+The documentation for the Semantic UI design system and component library. This is a statically generated PWA built using GatsbyJS.
 
 # Development
 
 ## Getting Started
 
 1. Install NodeJS
-1. `cd /path/to/ksc-ui/docs/`
+1. `cd /path/to/semantic-ui-docs-gatsby/`
 1. `npm i`
 1. `npm run develop`
 
-> These docs also rely on the distribution build of KSC UI. This project usually comes bundled with it, but if you've made any changes to the source code, make sure to run the Gulp build script in the KSC UI project folder to generate a new distribution build (located in `/ksc-ui/dist/`)
+## Changing the SUI Theme
+
+This project uses `semantic-ui-css` to quickly boostrap a default SUI theme. You can change this in `gatsby-browser.js` and import your own themed CSS.
+
+> SASS and LESS is supported out of the box if you want to import source files vs production CSS.
 
 ## Building the Docs
 
@@ -59,27 +63,15 @@ For example, to display a code snippet and live editable example:
 
 ### Manually inside React components
 
-We use `react-syntax-highlighter` to add proper styling and formatting to source code examples. This is basically a wrapper around highlightJS, so any themes that are applicable there work here. We currently use "obsidian", which compliments the KSC brand's dark backgrounds and green color. Depending on it's placement we either display the `<SyntaxHighlighter>` component directly, or wrap it in an inverted segment (`<div class="ui inverted segment">`).
-
-In order to allow developers to quickly copy source code, when the user clicks the source code, we use `copy-to-clipboard` to add the code to the user's clipboard.
+You can use the same component that's used when rendering MDX, the `<CodeBlock>`. It accepts code as 'children' and the classname determines the language used for highlighting.
 
 ```js
-import SyntaxHighlighter from "react-syntax-highlighter"
-import { obsidian } from "react-syntax-highlighter/dist/esm/styles/hljs"
-import copy from "copy-to-clipboard"
+import CodeBlock from "../components/CodeBlock/CodeBlock"
 
 const codeExample = `<div>Legalize it</div>`
 
 <div className="ui inverted segment">
   <h3>Code snippet:</h3>
-  <SyntaxHighlighter
-    language="html"
-    style={obsidian}
-    onClick={() => {
-      copy(codeExample)
-    }}
-  >
-    {codeExample}
-  </SyntaxHighlighter>
+  <CodeBlock className="language-js">{codeExample}</CodeBlock>
 </div>
 ```
