@@ -1,3 +1,5 @@
+![Example screenshot of the Button documentation page displaying live code preview](./thumbnail.png)
+
 # Semantic UI Documentation
 
 The documentation for the Semantic UI design system and component library. This is a statically generated PWA built using GatsbyJS.
@@ -136,10 +138,10 @@ You can import "local" images using Markdown syntax or HTML that are contained i
 Gatsby uses Webpack to bundle the site, so if you use the `import` JS syntax, you can include images in your React components:
 
 ```jsx
-import YourImage from '../../your/relative/path/image.png'
+import YourImage from "../../your/relative/path/image.png"
 // Refers to any images inside `/src/images/`
 // using Webpack's aliasing (see `gatsby-node.js`)
-import YourOtherImage from '@images/image.png'
+import YourOtherImage from "@images/image.png"
 
 export const Image = () => <img src={YourImage} />
 ```
@@ -174,4 +176,7 @@ const codeExample = `<div>Legalize it</div>`
   <CodeBlock className="language-js">{codeExample}</CodeBlock>
 </div>
 ```
-````
+
+```
+
+```
