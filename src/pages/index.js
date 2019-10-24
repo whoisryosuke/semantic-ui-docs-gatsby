@@ -1,4 +1,6 @@
 import React from "react"
+import Helmet from "react-helmet"
+import { StaticQuery, graphql } from "gatsby"
 
 import "./index.css"
 
@@ -21,8 +23,51 @@ import MobileImg from "@images/icons/mobile.png"
 import HeartImg from "@images/icons/heart.png"
 import RocketImg from "@images/icons/rocket.png"
 
-const IndexPage = ({ data }) => (
+const IndexPage = ({ data }) => {
+  const title = "The Unofficial Gatsby Version"
+
+  return (
+  <StaticQuery
+    query={graphql`
+          query IndexSiteQuery {
+            site {
+              siteMetadata {
+                title
+                sidebar {
+                  pages {
+                    slug
+                    title
+                    pages {
+                      slug
+                      title
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+    render={data => (
   <div id="example" class="index">
+    <Helmet
+      title={
+        title
+          ? `${title} - ${data.site.siteMetadata.title}`
+          : data.site.siteMetadata.title
+      }
+      meta={[
+        {
+          name: "description",
+          content: "Documentation for Semantic UI Component Library",
+        },
+        {
+          name: "keywords",
+          content: "design system, style guide, documentation",
+        },
+      ]}
+    >
+      <html lang="en" />
+    </Helmet>
     <div class="full height">
       <div class="following bar">
   <div class="ui container">
@@ -1108,6 +1153,9 @@ const IndexPage = ({ data }) => (
 </div>
     </div>
   </div>
+    )} 
+  />
 )
+}
 
 export default IndexPage
