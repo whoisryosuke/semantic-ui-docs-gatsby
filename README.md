@@ -2,7 +2,9 @@
 
 # Semantic UI Documentation
 
-The documentation for the Semantic UI design system and component library. This is a statically generated PWA built using GatsbyJS.
+Documentation for the Semantic UI design system and component library. This is a statically generated PWA built using GatsbyJS, using MDX to render Markdown and React components into pages.
+
+Feel free to use this as a basis for your next documentation project (particularly if you already use Semantic UI). Works great with HTML/CSS based component libraries.
 
 # Development
 
