@@ -27,38 +27,6 @@ This runs the Gatsby build process (`gatsby build` under the hood). Gatsby will 
 
 # How to Use
 
-## Editing the Sidebar
-
-The sidebar is controlled by `gatsby-config.js`, where you'll find the `siteMetadata.sidebar.pages` property. The pages property accepts an array of objects with a slug, title, and optionally an array of more sub-pages (similarly structured).
-
-```js
-{
-      pages: [
-        {
-          slug: "/getting-started",
-          title: "Getting Started",
-        },
-        {
-          slug: "/guidelines/overview",
-          title: "Guidelines",
-          pages: [
-            {
-              slug: "/guidelines/overview",
-              title: "Overview",
-            },
-            {
-              slug: "/guidelines/design-principles",
-              title: "Design Principles",
-            },
-          ],
-        },
-        ...
-      ]
-}
-```
-
-You can see how this array is rendered in `/src/components/sidebar.js`. Each page is rendered as a SUI menu item, and if there are nested pages, it's rendered using the `<Dropdown>` component. This current setup only supports one level of nested pages.
-
 ## Creating/Editing Pages
 
 There are two ways to create pages with this Gatsby setup, with ReactJS files or MDX.
@@ -118,6 +86,38 @@ Semantic UI packaged Gulp build tools so your project can preserve its [own them
 <Button>Get Started</Button>
 ```
 ````
+
+## Editing the Sidebar
+
+The sidebar is controlled by `gatsby-config.js`, where you'll find the `siteMetadata.sidebar.pages` property. The pages property accepts an array of objects with a slug, title, and optionally an array of more sub-pages (similarly structured).
+
+```js
+{
+      pages: [
+        {
+          slug: "/getting-started",
+          title: "Getting Started",
+        },
+        {
+          slug: "/guidelines/overview",
+          title: "Guidelines",
+          pages: [
+            {
+              slug: "/guidelines/overview",
+              title: "Overview",
+            },
+            {
+              slug: "/guidelines/design-principles",
+              title: "Design Principles",
+            },
+          ],
+        },
+        ...
+      ]
+}
+```
+
+You can see how this array is rendered in `/src/components/sidebar.js`. Each page is rendered as a SUI menu item, and if there are nested pages, it's rendered using the `<Dropdown>` component. This current setup only supports one level of nested pages.
 
 ## Add images
 
