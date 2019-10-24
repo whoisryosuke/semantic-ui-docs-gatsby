@@ -68,7 +68,7 @@ class Layout extends React.Component {
                   name: "description",
                   content: description
                     ? description
-                    : "Documentation for Kush Supply Co. Design System and Component Library",
+                    : "Documentation for Semantic UI Component Library",
                 },
                 {
                   name: "keywords",
