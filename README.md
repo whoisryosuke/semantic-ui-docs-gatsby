@@ -6,6 +6,21 @@ Documentation for the Semantic UI design system and component library. This is a
 
 Feel free to use this as a basis for your next documentation project (particularly if you already use Semantic UI). Works great with HTML/CSS based component libraries.
 
+# Features
+
+- 🎛 MDX
+- 💄 SASS/LESS
+- 🔷 Semantic UI
+- 💻️ Live Code component
+- ☎️ SEO component
+- 🕹 PWA
+- ✈️ Offline-ready
+- 📱 Mobile-friendly
+- 📡 Webpack aliasing
+- 📦 JSON support
+- 👕 Prettier + Markdown lint
+- 🔌 Nodemon
+
 # Development
 
 ## Getting Started
